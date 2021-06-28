@@ -1,1 +1,6 @@
-console.log("Testing 1 2");
+fetch("https://pokeapi.co/api/v2/pokemon/")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    document.querySelector(".pokemon-list").innerHTML = data.results;
+  });
