@@ -8,7 +8,7 @@ function pokemons(url) {
       console.log(data);
       // Get the list of pokemon from the results
       let pokemon = data.results;
-      let pokemonContainer = document.querySelector(".img-container");
+      let pokemonContainer = document.querySelector(".pokemon-info");
       // Clear the container
       pokemonContainer.innerHTML = "";
       // Looping over pokemon list
@@ -29,7 +29,7 @@ function getPokemonInfo(url) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      document.querySelector(".pokemon-info").innerHTML = `
+      document.querySelector(".img-container").innerHTML = `
     <img src="${data.sprites.front_default} ">
     `;
     });
