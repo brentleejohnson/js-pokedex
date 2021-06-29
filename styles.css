@@ -11,7 +11,6 @@ body {
   align-items: center;
   justify-content: space-evenly;
   background-image: url(./pokemon-background.jpg);
-  /* object-fit: cover; */
-  background-position: bottom;
+  object-fit: cover;
   background-repeat: no-repeat;
 }
