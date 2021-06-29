@@ -11,3 +11,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
+
+#pokemon-title {
+  width: 20%;
+}
