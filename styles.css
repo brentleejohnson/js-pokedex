@@ -70,12 +70,46 @@ body {
 }
 
 .buttons {
+  background: grey;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.btn {
+.buttons button {
+  height: 35px;
+  width: auto;
+  font-size: 15px;
+  margin: 1%;
+  padding: 0 2%;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px black;
+  text-transform: uppercase;
 }
 
-.next-btn {
+.buttons button:hover {
+  box-shadow: 3px 3px 0 black;
+}
+
+.next-button {
+  height: 20%;
+}
+
+.next-button button {
+  height: 35px;
+  width: auto;
+  font-size: 15px;
+  margin: 1%;
+  padding: 0 2%;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px black;
+  text-transform: uppercase;
+}
+
+.next-button button:hover {
+  box-shadow: 3px 3px 0 black;
 }
 
 /* .hologram {

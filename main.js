@@ -18,7 +18,7 @@ function pokemons(url) {
       // Add a next pokemon button
       document.querySelector(
         ".next-button"
-      ).innerHTML += `<button onclick="pokemons('${data.next}')">Next</button>`;
+      ).innerHTML = `<button onclick="pokemons('${data.next}')">Next</button>`;
     });
 }
 
