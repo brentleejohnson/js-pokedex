@@ -16,7 +16,9 @@ function pokemons(url) {
         pokemonContainer.innerHTML += `<button onclick="getPokemonInfo('${btn.url}')">${btn.name}</button>`;
       });
       // Add a next pokemon button
-      pokemonContainer.innerHTML += `<br><br><button onclick="pokemons('${data.next}')">Next</button>`;
+      document.querySelector(
+        ".next-button"
+      ).innerHTML += `<button onclick="pokemons('${data.next}')">Next</button>`;
     });
 }
 
