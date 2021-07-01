@@ -14,11 +14,26 @@ body {
   background-size: cover;
 }
 
+.pokeball {
+}
+
+.hologram {
+}
+
+.holocard {
+}
+
 #title {
   color: white;
+}
+
+.img-container {
 }
 
 .pokemon-info {
   color: white;
   font-size: 20px;
+}
+
+.buttons {
 }
