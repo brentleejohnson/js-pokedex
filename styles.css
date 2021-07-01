@@ -10,7 +10,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-image: url(./pokemon-background.jpg);
-  object-fit: cover;
-  background-repeat: no-repeat;
+  background-image: url(./pokedex-bg.jpg);
+  background-size: cover;
+}
+
+h2 {
+  color: white;
 }
