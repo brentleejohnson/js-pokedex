@@ -34,7 +34,13 @@ function getPokemonInfo(url) {
       fetch(data.species.url)
         .then((res) => res.json())
         .then((speciesData) => {
+          // Fetches the data
           console.log(speciesData);
+          // Name
+          document.querySelector(".name").innerHTML = `
+          <h2>Name: ${data.name}</h2>
+          <h3>Capture Rate: ${data.capture_rate}</h3>
+          `;
           // Image
           document.querySelector(".img-container").innerHTML = `
           <img src="${data.sprites.front_default} ">
