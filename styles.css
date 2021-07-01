@@ -14,6 +14,11 @@ body {
   background-size: cover;
 }
 
-h2 {
+#title {
   color: white;
+}
+
+.pokemon-info {
+  color: white;
+  font-size: 20px;
 }

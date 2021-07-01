@@ -8,7 +8,7 @@ function pokemons(url) {
       console.log(data);
       // Get the list of pokemon from the results
       let pokemon = data.results;
-      let pokemonContainer = document.querySelector(".pokemon-info");
+      let pokemonContainer = document.querySelector(".buttons");
       // Clear the container
       pokemonContainer.innerHTML = "";
       // Looping over pokemon list
@@ -29,8 +29,18 @@ function getPokemonInfo(url) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      document.querySelector(".img-container").innerHTML = `
-    <img src="${data.sprites.front_default} ">
-    `;
+      fetch(data.species.url)
+        .then((res) => res.json())
+        .then((speciesData) => {
+          console.log(speciesData);
+          // Image
+          document.querySelector(".img-container").innerHTML = `
+          <img src="${data.sprites.front_default} ">
+          `;
+          // Description
+          document.querySelector(".pokemon-info").innerHTML = `
+          <p>${speciesData.flavor_text_entries[0].flavor_text}</p>
+          `;
+        });
     });
 }
