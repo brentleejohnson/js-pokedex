@@ -43,7 +43,7 @@ function getPokemonInfo(url) {
           `;
           // Image
           document.querySelector(".img-container").innerHTML = `
-          <img src="${data.sprites.front_default} ">
+          <img src="${data.sprites.other.dream_world.front_default} ">
           `;
           // Description
           document.querySelector(".pokemon-info").innerHTML = `
@@ -54,30 +54,13 @@ function getPokemonInfo(url) {
 }
 
 // Ripple Effect for buttons
-function createRipple(event) {
-  const button = event.getElementsByTagName("button");
+let rippleButtons = document.querySelectorAll("button");
 
-  const circle = document.createElement("span");
-  const diameter = Math.max(button.clientWidth, button.clientHeight);
-  const radius = diameter / 2;
-
-  circle.style.width = circle.style.height = `${diameter}px`;
-  circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
-  circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
-  circle.classList.add("ripple");
-
-  //   Removing existing ripples from previous clicks
-  const ripple = button.getElementsByClassName("ripple")[0];
-
-  if (ripple) {
-    ripple.remove();
-  }
-
-  //   Injecting the span inside the circle
-  button.appendChild(circle);
-}
-
-const buttons = document.getElementsByTagName("div");
-for (const button of buttons) {
-  button.addEventListener("click", createRipple);
-}
+rippleButtons.addEventListener("click", function (event) {
+  let rippleBtn = event.currentTarget;
+  const elStyles = (el, styles) => Object.assign(el.style, styles);
+  elStyles(rippleBtn, {
+    background: "black",
+    color: "white",
+  });
+});
