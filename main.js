@@ -15,6 +15,17 @@ function pokemons(url) {
       pokemon.forEach((btn) => {
         pokemonContainer.innerHTML += `<button onclick="getPokemonInfo('${btn.url}')">${btn.name}</button>`;
       });
+      // Active Class
+      let activeButtons = document.querySelectorAll("button");
+
+      for (let i = 0; i < activeButtons.length; i++) {
+        activeButtons[i].addEventListener("click", function (e) {
+          for (let i = 0; i < activeButtons.length; i++) {
+            activeButtons[i].classList.remove("active");
+          }
+          e.currentTarget.classList.add("active");
+        });
+      }
       // Add a next pokemon button
       document.querySelector(
         ".next-button"
@@ -52,15 +63,3 @@ function getPokemonInfo(url) {
         });
     });
 }
-
-// Ripple Effect for buttons
-let rippleButtons = document.querySelectorAll("button");
-
-rippleButtons.addEventListener("click", function (event) {
-  let rippleBtn = event.currentTarget;
-  const elStyles = (el, styles) => Object.assign(el.style, styles);
-  elStyles(rippleBtn, {
-    background: "black",
-    color: "white",
-  });
-});
