@@ -150,6 +150,11 @@ button {
 }
 
 button.active {
-  background: black;
-  color: yellow;
+  background: rgb(8, 31, 136);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(6, 84, 170, 1) 88%,
+    rgba(8, 31, 136, 1) 100%
+  );
 }

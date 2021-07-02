@@ -13,7 +13,7 @@ function pokemons(url) {
       pokemonContainer.innerHTML = "";
       // Looping over pokemon list
       pokemon.forEach((btn) => {
-        pokemonContainer.innerHTML += `<button onclick="getPokemonInfo('${btn.url}')">${btn.name}</button>`;
+        pokemonContainer.innerHTML += `<button style="transition: 2s ease-in-out;" onclick="getPokemonInfo('${btn.url}')">${btn.name}</button>`;
       });
       // Active Class
       let activeButtons = document.querySelectorAll("button");
