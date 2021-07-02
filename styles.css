@@ -86,7 +86,7 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-.buttons button:hover {
+/* .buttons button:hover {
   background: linear-gradient(
     rgba(300, 300, 300, 0),
     rgba(300, 300, 300, 1),
@@ -94,7 +94,7 @@ body {
   );
   color: black;
   font-weight: bolder;
-}
+} */
 
 .next-button {
   height: 20%;
@@ -113,7 +113,7 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-.next-button button:hover {
+/* .next-button button:hover {
   background: linear-gradient(
     rgba(300, 300, 300, 0),
     rgba(300, 300, 300, 1),
@@ -121,4 +121,29 @@ body {
   );
   color: black;
   font-weight: bolder;
+} */
+
+button.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background: radial-gradient(
+    #000000 10%,
+    #00020b 10%,
+    #000315 10%,
+    #000420 10%,
+    #00052a 10%,
+    #000735 10%,
+    #00083f 10%,
+    #000949 10%,
+    #000a53 10%
+  );
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
