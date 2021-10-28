@@ -50,7 +50,6 @@ function getPokemonInfo(url) {
           // Name
           document.querySelector(".name").innerHTML = `
           <h2>Name: ${data.name}</h2>
-          <h3>Capture Rate: ${data.capture_rate}</h3>
           `;
           // Image
           document.querySelector(".img-container").innerHTML = `
